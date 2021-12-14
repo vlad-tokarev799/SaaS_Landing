@@ -467,6 +467,64 @@ body {
   color: #BDBDBD;
 }
 
+.product-features__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 0 35px;
+  grid-template-areas: "text image" "link image";
+}
+
+.product-features__container_reverse {
+  grid-template-areas: "image text" "image link";
+}
+
+.product-features__text {
+  padding-top: 5px;
+  grid-area: text;
+}
+
+.product-features__pre-title {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 36px;
+  text-transform: uppercase;
+  color: #BDBDBD;
+}
+
+.product-features__title {
+  margin-top: 26px;
+  margin-bottom: 22px;
+}
+
+.product-features__image-wrapper {
+  grid-area: image;
+  align-self: center;
+}
+
+.product-features__image {
+  max-width: 100%;
+}
+
+.product-features__link-block {
+  padding-top: 25px;
+  grid-area: link;
+}
+
+.product-features__link {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 100%;
+  color: #FF7235;
+  text-decoration: none;
+}
+
+.product-features__link-arrow {
+  font-size: 18px;
+  margin-left: 12px;
+}
+
 .header {
   padding: 55px 0 0px;
 }
@@ -625,8 +683,27 @@ body {
   align-items: center;
 }
 
-.product__brand {
-  margin: 0 15px;
+.always-online {
+  margin-top: 200px;
+}
+
+.free-some-cost {
+  margin-top: 140px;
+  background: #fffaf8;
+  padding-top: 138px;
+  padding-bottom: 138px;
+}
+
+.use-anytime {
+  padding: 138px 0 0;
+}
+
+.use-anytime__title {
+  margin-top: 19px;
+}
+
+.use-anytime__image-wrapper {
+  padding-top: 10px;
 }
 
 @media (max-width: 1170px) {
@@ -658,6 +735,10 @@ body {
 
   .product {
     margin-top: 160px;
+  }
+
+  .product__brand {
+    margin: 0 15px;
   }
 }
 
@@ -795,6 +876,19 @@ body {
 }
 
 @media (max-width: 768px) {
+  .product-features__container {
+    grid-template-columns: 1fr;
+    grid-template-areas: "text" "image" "link";
+    justify-items: center;
+    text-align: center;
+    grid-gap: 20px 0;
+  }
+
+  .product-features__image {
+    max-width: 400px;
+    width: 100%;
+  }
+
   .hero {
     margin-top: 60px;
   }
@@ -832,6 +926,19 @@ body {
   .hero__image {
     max-width: 400px;
     width: 100%;
+  }
+
+  .always-online {
+    margin-top: 100px;
+  }
+
+  .free-some-cost {
+    margin-top: 70px;
+    padding: 70px 0;
+  }
+
+  .use-anytime {
+    padding: 70px 0 0;
   }
 }
 
@@ -891,5 +998,18 @@ body {
 
   .product {
     margin-top: 50px;
+  }
+
+  .always-online {
+    margin-top: 60px;
+  }
+
+  .free-some-cost {
+    margin-top: 40px;
+    padding: 40px 0;
+  }
+
+  .use-anytime {
+    padding: 40px 0;
   }
 }
