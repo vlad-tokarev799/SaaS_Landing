@@ -19,7 +19,7 @@ gulp.task('sass', function(){ // Создаем таск "sass"
     return gulp.src('app/sass/*.+(scss|sass)')
         .pipe(sass({outputStyle: 'compressed'}))
         .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
-		.pipe(gcmq())
+		// .pipe(gcmq())
         .pipe(gulp.dest('app/css'))
         .pipe(browserSync.reload({stream: true}))
 })
