@@ -10,4 +10,14 @@ $(() => {
         $('#overlay').removeClass('overlay_open')
         $('#topNavList').removeClass('top-nav__list_open')
     })
+
+    $('.reviews-slider').slick({
+        arrows: false,
+        centerMode: true,
+        dots: true,
+        slidesToShow: 1,
+        variableWidth: true,
+        appendDots: '.reviews',
+        dotsClass: 'reviews-slider__dots'
+    })
 })
